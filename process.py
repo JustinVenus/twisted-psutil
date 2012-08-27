@@ -4,7 +4,7 @@ from twisted.python import components, util
 import psutil
 
 __author__ = "Justin Venus <justin.venus@gmail.com>"
-__doc__ = """
+__doc__ = getattr(psutil,'__doc__', "") + """
 This is a twisted wrapper library for the excellent psutil library. Many of the
 psutil implementations make a lot of blocking IO calls, which don't fit well in
 twisted's asynchronous model.  This wrapper makes use of some of twisted's 
